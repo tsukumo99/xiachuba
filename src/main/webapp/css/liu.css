@@ -1,0 +1,138 @@
+.page-container {
+    margin-top: 30px;
+    max-width: 100%;
+}
+
+.bottom-container, .footer-container, .page-container, .topbar-container {
+    width: 1000px;
+    margin: auto;
+}
+.list, .plain {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.page-container .page-title {
+    font-size: 34px;
+}
+.page-container .page-title {
+    font-size: 34px;
+    margin: 0 0 16px;
+    line-height: 1.2;
+    font-weight: 700;
+    word-break: break-all;
+}
+.font16 {
+    font-size: 16px;
+}
+.p40 {
+    padding: 40px!important;
+}
+.block-bg {
+    background-color: #f5f6f5;
+}
+.pb20 {
+    padding-bottom: 20px!important;
+}
+.mb20 {
+    margin-bottom: 20px!important;
+}
+.has-bottom-border {
+    border-bottom: 1px solid #f3f3f3;
+}
+.cates-list-info {
+    width: 160px;
+    overflow: hidden;
+}
+
+.ml15 {
+    margin-left: 15px!important;
+}
+
+.float-left {
+    float: left;
+}
+.cates-list-mini {
+    margin-left: 184px;
+    overflow: hidden;
+    zoom: 1;
+    width: 614px;
+}
+body .hidden {
+    display: none;
+}
+.cates-list-all {
+    margin-left: 200px;
+    width: 600px;
+}
+.cates-list-info h3 {
+    font-weight: 700;
+}
+
+.font20 {
+    font-size: 20px;
+}
+
+.m0 {
+    margin: 0!important;
+}
+.cates-list-mini ul {
+    float: left;
+    display: inline;
+    width: 180px;
+    margin-left: 16px;
+    border-bottom: 1px solid #f3f3f3;
+    padding: 0 0 8px;
+    list-style: none;
+    margin-top: 2px;
+}
+.cates-list-mini ul.cates-border-none {
+    border: none;
+}
+.cates-list-mini .cates-idx-2-5 {
+    margin-top: -60px;
+}
+.cates-list-more {
+    text-align: right;
+}
+.cates-list-mini .cates-list-first {
+    color: #909090;
+}
+.cates-list-mini li {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 15px;
+    width: 105px;
+}
+.category-container a {
+    color: #222;
+}
+a {
+    overflow: hidden;
+    /*color: #dd3915;*/
+    text-decoration: none;
+}
+a, span {
+    vertical-align: baseline;
+}
+a {
+    background-color: transparent;
+}
+a:hover{
+    background-color: white;
+    color:red;
+}
+.cates-list-info h3 {
+    font-weight: 700;
+}
+.cates-list-more em {
+    padding-left: 10px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAD8CAMAAAAos/boAAAAGXRFW…weGk1QSUUY/GB3IBBoU6Tkk5R0SmZK6SvlOLsDzeslwAAWeXsdoDqTbwAAAABJRU5ErkJggg==);
+    background-repeat: no-repeat;
+}
+.cates-list-mini .cates-list-limit {
+    width: 392px;
+}
+.cates-list-more {
+    text-align: right;
+}

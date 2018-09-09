@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/layer/layer.js"></script>
+    <script src="js/GreateCaipu.js"></script>
+    <script src="js/jquery.ui.widget.js"></script>
+    <script src="js/jquery.iframe-transport.js"></script>
+    <script src="js/jquery.fileupload.js"></script>
+    <link rel="stylesheet" href="css/Greatecaipu.css">
+
+</head>
+<body>
+<div class="topbar-outer has-bottom-border">
+    <div class="topbar-container">
+        <div class="topbar">
+            <div class="pure-g">
+                <div class="pure-u-1-6">
+                    <a href="" class="logo">爱厨房</a>
+                </div>
+                <div class="pure-u-5-6">
+                    <div class="float-left">
+                        <form class="search" action="/search/">
+                            <span class="twitter-typeahead" style="position: relative; float: left;"><input
+                                    class="tt-hint" type="text" autocomplete="off" spellcheck="off" disabled=""
+                                    style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);"><input
+                                    type="text" name="keyword" class="typeahead float-left tt-query" value=""
+                                    placeholder="搜索菜谱、食材" autocomplete="off" spellcheck="false" dir="auto"
+                                    style="position: relative; vertical-align: top; background-color: transparent;"><span
+                                    style="position: absolute; left: -9999px; visibility: hidden; white-space: nowrap; font-family: sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 1px; text-indent: 0px; text-rendering: auto; text-transform: none;"></span><span
+                                    class="tt-dropdown-menu"
+                                    style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"></span></span>
+                            <input type="hidden" name="cat" value="1001">
+                            <input type="submit" value="搜菜谱" class="button float-left">
+                        </form>
+                    </div>
+                    <div class="float-left">
+                        <ul class="site-nav plain pure-g">
+                            <li class="pure-u"><a href="home_page.html" data-ga-event="公共页面/导航栏/$text">首页</a></li>
+                            <li class="topbar-cats pure-u">
+                                <a href="caiPingFenLei.html" class="block-link" data-ga-event="公共页面/导航栏/$text"><span id="span1">菜谱分类</span></a>
+                                <div  class="topbar-cats-submenu hidden" style="display: none;">
+                                    <div class="topbar-cats-submenu-bg">
+                                        <ul class="plain">
+                                            <li class="topbar-cat-head">常用主题</li>
+                                            <li><a href="" title="家常菜菜谱大全"
+                                                   data-ga-event="公共页面/导航栏/$text">家常菜</a></li>
+                                            <li><a href="" title="快手菜菜谱大全"
+                                                   data-ga-event="公共页面/导航栏/$text">快手菜</a></li>
+                                            <li><a href="" title="下饭菜菜谱大全"
+                                                   data-ga-event="公共页面/导航栏/$text">下饭菜</a></li>
+                                            <li><a href="" title="早餐菜谱大全"
+                                                   data-ga-event="公共页面/导航栏/$text">早餐</a></li>
+                                            <li><a href="" title="减肥菜谱大全"
+                                                   data-ga-event="公共页面/导航栏/$text">减肥</a></li>
+                                            <li><a href="" title="汤羹菜谱大全"
+                                                   data-ga-event="公共页面/导航栏/$text">汤羹</a></li>
+                                            <li><a href="" title="烘焙菜谱大全"
+                                                   data-ga-event="公共页面/导航栏/$text">烘焙</a></li>
+                                            <li><a  title="小吃菜谱大全"
+                                                   data-ga-event="公共页面/导航栏/$text">小吃</a></li>
+                                        </ul>
+                                        <ul class="plain">
+                                            <li class="topbar-cat-head">常见食材</li>
+                                            <li><a href="" title="猪肉做法大全" data-ga-event="公共页面/导航栏/$text">猪肉</a>
+                                            </li>
+                                            <li><a href="" title="鸡肉做法大全" data-ga-event="公共页面/导航栏/$text">鸡肉</a>
+                                            </li>
+                                            <li><a href="" title="牛肉做法大全" data-ga-event="公共页面/导航栏/$text">牛肉</a>
+                                            </li>
+                                            <li><a href="" title="鱼做法大全"
+                                                   data-ga-event="公共页面/导航栏/$text">鱼</a></li>
+                                            <li><a href="" title="鸡蛋做法大全" data-ga-event="公共页面/导航栏/$text">鸡蛋</a>
+                                            </li>
+                                            <li><a href="" title="土豆做法大全" data-ga-event="公共页面/导航栏/$text">土豆</a>
+                                            </li>
+                                            <li><a href="" title="茄子做法大全" data-ga-event="公共页面/导航栏/$text">茄子</a>
+                                            </li>
+                                            <li><a href="" title="豆腐做法大全"
+                                                   data-ga-event="公共页面/导航栏/$text">豆腐</a></li>
+                                        </ul>
+                                        <ul class="plain">
+                                            <li class="topbar-cat-head">时令食材</li>
+                                            <li>
+                                                <a href="" title="秋葵做法大全" data-ga-event="公共页面/导航栏/$text">秋葵</a>
+                                                <span class="topbar-cat-score">
+                        10.0
+                    </span>
+                                            </li>
+                                            <li>
+                                                <a href="" title="丝瓜做法大全" data-ga-event="公共页面/导航栏/$text">丝瓜</a>
+                                                <span class="topbar-cat-score">
+                        10.0
+                    </span>
+                                            </li>
+                                            <li>
+                                                <a href="" title="西瓜做法大全" data-ga-event="公共页面/导航栏/$text">西瓜</a>
+                                                <span class="topbar-cat-score">
+                        10.0
+                    </span>
+                                            </li>
+                                            <li>
+                                                <a href="" title="苦瓜做法大全" data-ga-event="公共页面/导航栏/$text">苦瓜</a>
+                                                <span class="topbar-cat-score">
+                        10.0
+                    </span>
+                                            </li>
+                                            <li>
+                                                <a href="" title="西柚做法大全" data-ga-event="公共页面/导航栏/$text">西柚</a>
+                                                <span class="topbar-cat-score">
+                        10.0
+                    </span>
+                                            </li>
+                                            <li>
+                                                <a href="" title="空心菜做法大全"
+                                                   data-ga-event="公共页面/导航栏/$text">空心菜</a>
+                                                <span class="topbar-cat-score">
+                        9.9
+                    </span>
+                                            </li>
+                                            <li>
+                                                <a href="" title="葡萄做法大全" data-ga-event="公共页面/导航栏/$text">葡萄</a>
+                                                <span class="topbar-cat-score">
+                        9.9
+                    </span>
+                                            </li>
+                                            <li>
+                                                <a href="" title="冬瓜做法大全" data-ga-event="公共页面/导航栏/$text">冬瓜</a>
+                                                <span class="topbar-cat-score">
+                        9.8
+                    </span>
+                                            </li>
+                                        </ul>
+                                        <div class="topbar-cats-submenu-bottom"><a href=""
+                                                                                   data-ga-event="公共页面/导航栏/$text">查看全部分类</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pure-u"><a href="Menu.html" data-ga-event="公共页面/导航栏/$text">菜单</a>
+                            </li>
+                            <li class="pure-u"><a href="workDynamicAll.html" data-ga-event="公共页面/导航栏/$text" rel="nofollow">作品动态</a></li>
+                        </ul>
+                    </div>
+                    <div class="float-right clearfix">
+
+                        <div class="user-action">
+                            <div class="user-nav">
+                                <a class="user-avatar avatar" href="/cook/130169432/"
+                                   data-ga-event="公共页面/导航栏/$text">
+                                    <img id="img1" src="images/photo/1.png" alt="手机用户5710_l930的厨房" width="30" height="30"/>
+                               </a>
+                                <div class="user-nav-submenu hidden" style="position: absolute;top: 30px;" >
+                                    <ul class="plain">
+                                        <li><a href="" data-ga-event="公共页面/导航栏/$text">我的厨房</a></li>
+                                        <li><a href=""
+                                               data-ga-event="公共页面/导航栏/$text">我的菜单</a></li>
+                                        <li><a href="" data-ga-event="公共页面/导航栏/$text">帐号设置</a></li>
+                                        <li><a href="" data-ga-event="公共页面/导航栏/$text">发现好友</a></li>
+                                        <li><a href="">退出</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a class="user-collect" href="" title="我的收藏">
+                                <i class="icon"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<!--++++++++++++++++++++++++++++++++++++++++++++我的部分+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+<div class="content-container">
+    <div class="right">
+            <input type="text" name="menu-title" placeholder="添加菜谱名称">
+                <div class="menu-cover">
+                    <form action="/PicUploadServlet" enctype="multipart/form-data" name="fileUploadCover" method="post">
+                        <input type="hidden" name="flag" value="0">
+                        <input type="file" name="menuCover" class="picUploadCover">
+                    </form>
+                    <div class="menu-cover-click">
+                        <!--显示预览图-->
+                        <img src="" class="close">
+                        <div class="tips">
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+菜谱封面</span><br>
+                            <span>最佳尺寸：1280 x 1024</span>
+                        </div>
+                    </div>
+                </div>
+            <div class="author">
+                <img src="images/photo/login.JPG" class="UAvatar" />
+                <div class="Username Uname">Union-one</div>
+            </div>
+            <textarea id="description" placeholder="点击添加描述"></textarea>
+            <div class="material">
+                <div class="material-title"><span>用料</span></div>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td><input type="text" placeholder="食材：如鸡蛋"></input></td>
+                        <td><input type="text" placeholder="用量：如1只"></td>
+                        <td class="delete" style="width: 30px"><img src="images/close-small.png" class="small-delete"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="add-material">追加一行用料</div>
+            </div>
+            <div class="steps">
+                <div class="steps-title">步骤</div>
+                <ul id="steps-ul">
+                    <li>
+                        <div class="steps-num">1</div>
+                        <div class="steps-content">
+                            <textarea placeholder="点击添加菜谱步骤内容"></textarea>
+                        </div>
+                        <div class="steps-img">
+                            <form action="/PicUploadServlet" enctype="multipart/form-data" name="fileUploadSteps" method="post">
+                                <input type="hidden" name="flag" value="0">
+                                <input type="file" name="menu-cover" class="picUpload">
+                            </form>
+                            <div class="step-img">
+                                <!--显示预览图-->
+                                <img src="" class="close">
+                                <!--右上角关闭按钮，清除已选择文件-->
+                                <i class="close"></i>
+                                <div class="tipss">
+                                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+菜谱封面</span><br>
+                                    <span>最佳尺寸：1280 x 1024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="steps-delete">
+                            <img src="images/close-small.png">
+                        </div>
+                    </li>
+                </ul>
+                <div class="add-steps" style="cursor:pointer;">追加一个步骤</div>
+            </div>
+            <div class="small-tips">
+                <span>小贴士</span>
+                <textarea name="small-tips" placeholder="点击添加小贴士"></textarea>
+            </div>
+            <input type="button" value="发布菜谱" id="createMenu">
+    </div>
+    <div class="left">
+        <div class="top"><a>草稿箱</a></div>
+        <div class="center-1">
+            <div class="title">创建菜谱的人是厨房里的天使</div>
+            <div class="content">下厨房鼓励大家上传自己原创的菜谱信息； 转载、翻译的内容请在简介里表明出处。</div>
+        </div>
+        <div class="center-2">
+            <div class="title">推荐至分类</div>
+            <div class="content">
+                <div  style="color: #909090 ; font: 16px 隶书;font-weight: bold;margin-top: 2%"><input class="mean" type="text" value="添加" style="border: 1px solid #d7d7d7 " /></div>
+                <div style="margin-top: 2%">如：快手菜、早餐、汤羹、饼干、零食等，不建议输入食材名。 (使用空格或逗号来分隔分类)</div>
+            </div>
+        </div>
+        <div class="center-3">
+            <div class="title">同步</div>
+            <div class="share">
+                <div class="share-1">
+                    <input type="checkbox" value="douban" />豆瓣网<span>点击绑定</span>
+                </div>
+                <div class="share-2">
+                    <input type="checkbox" value="Qzon" />QQ空间
+                    <span onclick="openWindow()">点击绑定</span>
+                </div>
+                <div class="share-3">
+                    <input type="checkbox" value="xinglang" checked/>新浪微博
+                </div>
+            </div>
+        </div>
+        <div class="center-4">
+            <div class="title">独家菜谱</div>
+            <div class="normal-font">
+                <input type="checkbox" />独家菜谱仅在下厨房发布，拥有特殊标识
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>

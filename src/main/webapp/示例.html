@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+            $(".btn").click(function () {
+                $.ajax({
+                    url: "/getUserImageServlet",
+                    type: "post",
+                    data: {"u_id":$(".u_id").val()},
+                    dataType:"text",
+                    success:function (result) {
+                        alert(result);
+                        $("img").prop("src",result);
+                    }
+                })
+            })
+        })
+        </script>
+</head>
+<body>
+            <input type="text" placeholder="请输入用户id" class="u_id">
+            <img id="comehere" src=""/>
+            <button class="btn">提交</button>
+<div>
+    <a href="home_page.html?a=1&b=2">up</a>
+</div>
+
+
+</body>
+</html>

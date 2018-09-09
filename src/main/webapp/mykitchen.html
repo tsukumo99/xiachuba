@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/userModel.css">
+    <link rel="stylesheet" href="css/mykitchen/mykitchen2.css">
+    <link rel="stylesheet" href="css/mykitchen/mykitchen.css">
+    <link rel="stylesheet" href="css/messageBoard.css">
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/messageBoard.js"></script>
+    <script src="js/mykitchen.js"></script>
+    <script src="js/addImg.js"></script>
+
+</head>
+<body>
+<!--模态框-->
+<div class="dish-popup" id="dishPopup" style="display: none; z-index:999;background-color: rgba(0,0,0,0.7);">
+    <!--关闭-->
+    <div class="dish-popup-close">
+
+        <img src="images/modelImages/closeImage.png" height="48" width="48"/><
+    </div>
+    <!--关闭-->
+
+    <div class="content page-container pure-g"><div class="pure-u-2-3 main-panel">
+        <!--主体-->
+        <div class="dish-show block block-has-padding white-bg">
+            <div class="dish-cover block-negative-margin">
+                <img id="img66" src="" height="450" width="600" class="w100"/></div>
+            <div class="pure-g dish-info">
+                <div class="pure-u">
+                    <div class="pure-g">
+                        <div class="pure-u">
+                            <a class="image-link" >
+                                <img  src="userImages/userImage3.jpg" width="48" height="48" class="align-middle"/></a>
+                        </div>
+                        <div class="pure-u dish-user-info">
+                            <div class="gray-font">
+                                <a >堂妈小厨</a>
+                                <a class="icon icon-cooker" rel="nofollow"></a>
+                                分享作品 <a >晚餐•2018年8月27日</a>
+                            </div>
+                            <div class="dish-desc">珍宝海鲜坊，要提前在官网预约，我们时间比较紧，就点了一个套餐。辣椒蟹和蛋黄焗虾还有海皇汤味道极好，关键是食材非常新鲜，出来走走看看尝尝，可以有很多烹饪美食的灵感，回去做给家人吃！ <a href="">#晚餐•2018年8月27日#</a></div>
+                            <div class="gray-font normal-font">
+                                <a  class="gray-link">发表于</a>
+
+                                2018-08-27 15:19:43
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="pure-u float-right align-bottom dish-digg">
+                    <a  class="button large-button" rel="nofollow">赞</a>
+                </div>
+            </div>
+
+        </div>
+        <!--主体-->
+
+
+        <!--点赞-->
+        <div class="block block-has-padding dish-diggs-block white-bg">
+
+            <div class="title-bar">
+                <div class="title">赞</div>
+            </div>
+            <div class="content">
+                <div class="pure-g">
+
+                    <!--点赞添加的头像-->
+                    <div class="pure-u digg-user" data-user-id="111003977">
+                        <a class="image-link" title="" >
+                            <img class="display-block unveiled" src="userImages/userImage2.jpg" alt="" width="30" height="30"/></a>
+                    </div>
+
+                    <div class="pure-u digg-user" data-user-id="116416572">
+                        <a class="image-link" title="">
+
+                            <img class="display-block unveiled" src="userImages/userImage3.jpg" alt="" height="30" width="30"/></a>
+                    </div>
+
+                    <div class="pure-u digg-user" data-user-id="10732024">
+                        <a class="image-link" title="" >
+                            <img class="display-block unveiled" src="userImages/userImage4.jpg" alt="" height="30" width="30"/>
+                        </a>
+                    </div>
+                    <!--点赞添加的头像-->
+
+                    <div class="pure-u">
+                        &nbsp;&nbsp;<a href="javascript:;" class="gray-link normal-font" rel="nofollow" role="more">更多</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--点赞-->
+
+
+        <!--评论-->
+        <div class="block block-has-padding dish-comment-block comments-block white-bg">
+            <!--<div class="title-bar">-->
+                <!--<div class="title n-replies" data-n-replies="10">10 回应</div>-->
+            <!--</div>-->
+            <div class="content">
+
+                <ul id="pinglunUl" class="plain list comment-list">
+                    <!--评论-->
+                    <li>
+                        <div class="avatar-right-2" role="comment" data-target-url="/dish/143461175/comments/" data-target-id="143461175" data-comment-id="139412720" data-author-name="阳阳爱妈妈妈妈爱阳阳" data-author-id="126359651">
+                            <div class="left">
+                                <a class="image-link">
+                                    <img src="userImages/userImage2.jpg" height="60" width="60" class="unveiled"/>
+                                </a>
+                            </div>
+                            <div class="right-top info">
+                                <a  class="normal-font">阳阳爱妈妈妈妈爱阳阳</a>
+                                <span class="normal-font gray-font align-baseline">
+            苏州 |
+            &nbsp;19小时前 |
+              <a  class="gray-link" rel="nofollow">回复</a>
+          </span>
+                            </div>
+                            <div class="right-bottom">
+                                堂妈是出来业务考察的😄
+                            </div>
+                        </div>
+                    </li>
+                    <!--评论-->
+                </ul>
+
+                <span id="last"></span>
+
+
+                <!--没登录时的-->
+                <!--<form id="post_reply" method="POST" action="">-->
+                <!--你需要<a href="" rel="nofollow">登录</a>才能回应，-->
+                <!--还没有帐号？<a href="" rel="nofollow">注册一个</a>-->
+                <!--</form>-->
+                <!--没登录时的-->
+
+                <!--登陆时的-->
+                <div id="post_reply"  >
+                    <textarea class="reply" name="reply" rows="8" placeholder="用&quot;:&quot;+拼音，看看你能打出什么"></textarea><br>
+                    <input type="button" class="button mt10" value="发 言">
+                    <input type="hidden" name="xf" value="rsZd4">
+                </div>
+                <!--登陆时的-->
+
+
+
+            </div>
+        </div>
+        <!--评论-->
+
+
+        <div id="main-panel-bottom"></div>
+    </div><div class="pure-u-1-3 right-panel">
+        <!--作品-->
+        <div class="block block-has-padding white-bg pb0 mb0">
+            <div class="avatar-right-2">
+                <div class="left">
+                    <a class="image-link">
+                        <img src="userImages/userImage3.jpg" height="60" width="60"/>
+                    </a>
+                </div>
+                <div class="right-top">
+                    <a >堂妈小厨的厨房</a>
+                    <a  class="icon icon-cooker" rel="nofollow"></a>
+                </div>
+                <div class="right-bottom normal-font align-baseline gray-font">
+                    <a class="normal-font align-base-line black-font" title="关注堂妈小厨的厨友" rel="nofollow">427762</a> 关注
+                    <span class="ml5 mr5">|</span>
+                    <a class="normal-font align-baseline black-font"  title="堂妈小厨的菜谱">563</a> 菜谱
+                    <span class="ml5 mr5">|</span>
+                    <a class="normal-font align-baseline black-font"  title="堂妈小厨的作品">11605</a> 作品
+                </div>
+            </div>
+            <div class="user-follow">
+                <a  class="button display-block" rel="nofollow">关注</a>
+            </div>
+        </div>
+        <div class="block block-has-padding white-bg pb0 mb0">
+            <div class="title-bar">
+                <div class="title">堂妈小厨的其他作品</div>
+                <div class="left-action">
+                    <a >全部</a>
+                </div>
+            </div>
+
+            <div class="content">
+                <ul class="plain pure-g user-dishes">
+                    <li class="pure-u">
+                        <div role="dish" data-id="143458450">
+                            <a  class="image-link" title="午餐•2018年8月27日">
+                                <img src="images/modelImages/zuoping1.jpg" width="80" height="80" alt="午餐•2018年8月27日" title="午餐•2018年8月27日" class="unveiled"/></a>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="pure-u">
+                        <div role="dish" data-id="143456460">
+                            <a  class="image-link" title="午餐•2018年8月27日">
+                                <img src="images/modelImages/zuoping2.jpg" width="80" height="80" alt="午餐•2018年8月27日" title="午餐•2018年8月27日" class="unveiled"/></a>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="pure-u">
+                        <div role="dish" data-id="143455328">
+                            <a  class="image-link" title="午餐•2018年8月27日">
+                                <img src="images/modelImages/zuoping3.jpg" width="80" height="80" alt="午餐•2018年8月27日" title="午餐•2018年8月27日" class="unveiled"/></a>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="pure-u">
+                        <div role="dish" data-id="143455104">
+                            <a  class="image-link" title="午餐•2018年8月27日">
+                                <img src="images/modelImages/zuoping4.jpg" width="80" height="80" alt="午餐•2018年8月27日" title="午餐•2018年8月27日" class="unveiled"/></a>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="pure-u">
+                        <div role="dish" data-id="143445171">
+                            <a  class="image-link" title="晚餐•2018年8月26日">
+                                <img src="images/modelImages/zuoping5.jpg" width="80" height="80" alt="晚餐•2018年8月26日" title="晚餐•2018年8月26日" class="unveiled"/></a>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="pure-u">
+                        <div role="dish" data-id="143439664">
+                            <a  class="image-link" title="晚餐•2018年8月26日">
+                                <img src="images/modelImages/zuoping6.jpg" width="80" height="80" alt="晚餐•2018年8月26日" title="晚餐•2018年8月26日" class="unveiled"/></a>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="pure-u">
+                        <div role="dish" data-id="143438859">
+                            <a  class="image-link" title="晚餐•2018年8月26日">
+                                <img src="images/modelImages/zuoping7.jpg" width="80" height="80" alt="晚餐•2018年8月26日" title="晚餐•2018年8月26日" class="unveiled"/></a>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="pure-u">
+                        <div role="dish" data-id="143406581">
+                            <a class="image-link" title="晚餐•2018年8月25日">
+                                <img src="images/modelImages/zuoping8.jpg" width="80" height="80" alt="晚餐•2018年8月25日" title="晚餐•2018年8月25日" class="unveiled"/></a>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="pure-u">
+                        <div role="dish" data-id="143393148">
+                            <a  class="image-link" title="午餐•2018年8月25日">
+                                <img src="images/modelImages/zuoping9.jpg" width="80" height="80" alt="午餐•2018年8月25日" title="午餐•2018年8月25日" class="unveiled"/></a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!--作品-->
+
+        <!--菜谱-->
+        <div class="block block-has-padding white-bg pb0 mb0">
+            <div class="title-bar">
+                <div class="title">堂妈小厨的菜谱</div>
+                <div class="left-action">
+                    <a >全部</a>
+                </div>
+            </div>
+            <div class="content">
+                <ul class="plain pure-g user-recipes">
+
+                    <li class="pure-u">
+                        <div role="recipe" data-id="100486395">
+                            <a  class="image-link" title="洋葱酥卤肉饭">
+                                <img src="images/modelImages/caipu1.jpg" width="80" height="80" alt="洋葱酥卤肉饭" title="洋葱酥卤肉饭" class="unveiled"/></a>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="pure-u">
+                        <div role="recipe" data-id="100449964">
+                            <a  class="image-link" title="棉花糖版牛轧糖">
+                                <img src="images/modelImages/caipu2.jpg" width="80" height="80" alt="棉花糖版牛轧糖" title="棉花糖版牛轧糖" class="unveiled"/></a>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="pure-u">
+                        <div role="recipe" data-id="100103391">
+                            <a  class="image-link" title="糖醋藕丁">
+                                <img src="images/modelImages/caipu3.jpg" width="80" height="80" alt="糖醋藕丁" title="糖醋藕丁" class="unveiled"/></a>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="pure-u">
+                        <div role="recipe" data-id="100425684">
+                            <a  class="image-link" title="卡通黄油饼干">
+                                <img src="images/modelImages/caipu4.jpg" width="80" height="80" alt="卡通黄油饼干" title="卡通黄油饼干" class="unveiled"/></a>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="pure-u">
+                        <div role="recipe" data-id="100122364">
+                            <a  class="image-link" title="椰蓉牛奶小方">
+                                <img src="images/modelImages/caipu5.jpg" width="80" height="80" alt="椰蓉牛奶小方" title="椰蓉牛奶小方" class="unveiled"/></a>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="pure-u">
+                        <div role="recipe" data-id="100261383">
+                            <a  class="image-link" title="完美戚风">
+                                <img src="images/modelImages/caipu9.jpg" width="80" height="80" alt="完美戚风" title="完美戚风" class="unveiled"/></a>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="pure-u">
+                        <div role="recipe" data-id="100462435">
+                            <a  class="image-link" title="堂妈揭秘蒸包子的诀窍">
+                                <img src="images/modelImages/caipu6.jpg" width="80" height="80" alt="堂妈揭秘蒸包子的诀窍" title="堂妈揭秘蒸包子的诀窍" class="unveiled"/></a>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="pure-u">
+                        <div role="recipe" data-id="100511850">
+                            <a  class="image-link" title="堂妈金牌红烧肉">
+                                <img src="images/modelImages/caipu7.jpg" width="80" height="80" alt="堂妈金牌红烧肉" title="堂妈金牌红烧肉" class="unveiled"/></a>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="pure-u">
+                        <div role="recipe" data-id="100561458">
+                            <a  class="image-link" title="香酥炸鸡排">
+                                <img src="images/modelImages/caipu8.jpg" width="80" height="80" alt="香酥炸鸡排" title="香酥炸鸡排" class="unveiled"/></a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!--菜谱-->
+
+        <div class="block normal-font">
+        </div>
+
+    </div></div>
+</div>
+<!--模态框-->
+
+
+<div class="topbar-outer has-bottom-border">
+    <div class="topbar-container">
+        <div class="topbar">
+            <div class="pure-g">
+                <div class="pure-u-1-6">
+                    <a href="" class="logo">爱厨房</a>
+                </div>
+                <div class="pure-u-5-6">
+                    <div class="float-left">
+                        <form class="search" action="/search/">
+                            <span class="twitter-typeahead" style="position: relative; float: left;"><input
+                                    class="tt-hint" type="text" autocomplete="off" spellcheck="off" disabled=""
+                                    style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);"><input
+                                    type="text" name="keyword" class="typeahead float-left tt-query" value=""
+                                    placeholder="搜索菜谱、食材" autocomplete="off" spellcheck="false" dir="auto"
+                                    style="position: relative; vertical-align: top; background-color: transparent;"><span
+                                    style="position: absolute; left: -9999px; visibility: hidden; white-space: nowrap; font-family: sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 1px; text-indent: 0px; text-rendering: auto; text-transform: none;"></span><span
+                                    class="tt-dropdown-menu"
+                                    style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"></span></span>
+                            <input type="hidden" name="cat" value="1001">
+                            <input type="submit" value="搜菜谱" class="button float-left">
+                        </form>
+                    </div>
+                    <div class="float-left">
+                        <ul class="site-nav plain pure-g">
+
+                            <li class="pure-u">
+                                <a href="home_page.html">首页</a>
+                            </li>
+
+                            <li class="topbar-cats pure-u">
+                                <a href="caiPingFenLei.html">菜谱分类</a>
+
+                                <div  class="topbar-cats-submenu hidden" style="display: none;">
+                                    <div class="topbar-cats-submenu-bg">
+                                        <ul class="plain">
+                                            <li class="topbar-cat-head">常用主题</li>
+                                            <li><a href="" title="家常菜菜谱大全"
+                                                   data-ga-event="公共页面/导航栏/$text">家常菜</a></li>
+                                            <li><a href="" title="快手菜菜谱大全"
+                                                   data-ga-event="公共页面/导航栏/$text">快手菜</a></li>
+                                            <li><a href="" title="下饭菜菜谱大全"
+                                                   data-ga-event="公共页面/导航栏/$text">下饭菜</a></li>
+                                            <li><a href="" title="早餐菜谱大全"
+                                                   data-ga-event="公共页面/导航栏/$text">早餐</a></li>
+                                            <li><a href="" title="减肥菜谱大全"
+                                                   data-ga-event="公共页面/导航栏/$text">减肥</a></li>
+                                            <li><a href="" title="汤羹菜谱大全"
+                                                   data-ga-event="公共页面/导航栏/$text">汤羹</a></li>
+                                            <li><a href="" title="烘焙菜谱大全"
+                                                   data-ga-event="公共页面/导航栏/$text">烘焙</a></li>
+                                            <li><a href="" title="小吃菜谱大全"
+                                                   data-ga-event="公共页面/导航栏/$text">小吃</a></li>
+                                        </ul>
+                                        <ul class="plain">
+                                            <li class="topbar-cat-head">常见食材</li>
+                                            <li><a href="" title="猪肉做法大全" data-ga-event="公共页面/导航栏/$text">猪肉</a>
+                                            </li>
+                                            <li><a href="" title="鸡肉做法大全" data-ga-event="公共页面/导航栏/$text">鸡肉</a>
+                                            </li>
+                                            <li><a href="" title="牛肉做法大全" data-ga-event="公共页面/导航栏/$text">牛肉</a>
+                                            </li>
+                                            <li><a href="" title="鱼做法大全"
+                                                   data-ga-event="公共页面/导航栏/$text">鱼</a></li>
+                                            <li><a href="" title="鸡蛋做法大全" data-ga-event="公共页面/导航栏/$text">鸡蛋</a>
+                                            </li>
+                                            <li><a href="" title="土豆做法大全" data-ga-event="公共页面/导航栏/$text">土豆</a>
+                                            </li>
+                                            <li><a href="" title="茄子做法大全" data-ga-event="公共页面/导航栏/$text">茄子</a>
+                                            </li>
+                                            <li><a href="" title="豆腐做法大全"
+                                                   data-ga-event="公共页面/导航栏/$text">豆腐</a></li>
+                                        </ul>
+                                        <ul class="plain">
+                                            <li class="topbar-cat-head">时令食材</li>
+                                            <li>
+                                                <a href="" title="秋葵做法大全" data-ga-event="公共页面/导航栏/$text">秋葵</a>
+                                                <span class="topbar-cat-score">
+                        10.0
+                    </span>
+                                            </li>
+                                            <li>
+                                                <a href="" title="丝瓜做法大全" data-ga-event="公共页面/导航栏/$text">丝瓜</a>
+                                                <span class="topbar-cat-score">
+                        10.0
+                    </span>
+                                            </li>
+                                            <li>
+                                                <a href="" title="西瓜做法大全" data-ga-event="公共页面/导航栏/$text">西瓜</a>
+                                                <span class="topbar-cat-score">
+                        10.0
+                    </span>
+                                            </li>
+                                            <li>
+                                                <a href="" title="苦瓜做法大全" data-ga-event="公共页面/导航栏/$text">苦瓜</a>
+                                                <span class="topbar-cat-score">
+                        10.0
+                    </span>
+                                            </li>
+                                            <li>
+                                                <a href="" title="西柚做法大全" data-ga-event="公共页面/导航栏/$text">西柚</a>
+                                                <span class="topbar-cat-score">
+                        10.0
+                    </span>
+                                            </li>
+                                            <li>
+                                                <a href="" title="空心菜做法大全"
+                                                   data-ga-event="公共页面/导航栏/$text">空心菜</a>
+                                                <span class="topbar-cat-score">
+                        9.9
+                    </span>
+                                            </li>
+                                            <li>
+                                                <a href="" title="葡萄做法大全" data-ga-event="公共页面/导航栏/$text">葡萄</a>
+                                                <span class="topbar-cat-score">
+                        9.9
+                    </span>
+                                            </li>
+                                            <li>
+                                                <a href="" title="冬瓜做法大全" data-ga-event="公共页面/导航栏/$text">冬瓜</a>
+                                                <span class="topbar-cat-score">
+                        9.8
+                    </span>
+                                            </li>
+                                        </ul>
+                                        <div class="topbar-cats-submenu-bottom"><a href=""
+                                                                                   data-ga-event="公共页面/导航栏/$text">查看全部分类</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pure-u"><a href="Menu.html" data-ga-event="公共页面/导航栏/$text">菜单</a>
+                            </li>
+                            <li class="pure-u"><a href="workDynamicAll.html" data-ga-event="公共页面/导航栏/$text"
+                                                  rel="nofollow">作品动态</a></li>
+                        </ul>
+                    </div>
+                    <div class="float-right clearfix">
+
+                        <div class="user-action">
+                            <div class="user-nav" style="display: none;left: 1px;" >
+                                <a class="user-avatar " href="/cook/130169432/"
+                                   data-ga-event="公共页面/导航栏/$text">
+                                    <img id="img1" src="images/index/1.png" alt="手机用户5710_l930的厨房" width="30" height="30" style="border-radius: 50%"/>
+                                </a>
+                                <div class="user-nav-submenu hidden" style="position: absolute;top: 30px;" >
+                                    <ul class="plain">
+                                        <li><a href="mykitchen.html" data-ga-event="公共页面/导航栏/$text">我的厨房</a></li>
+                                        <li><a href="mykitchen.html" data-ga-event="公共页面/导航栏/$text">我的菜单</a></li>
+                                        <li><a href="setPersonalInfo.html" data-ga-event="公共页面/导航栏/$text">帐号设置</a></li>
+                                        <li><a href="" data-ga-event="公共页面/导航栏/$text">发现好友</a></li>
+                                        <li><a href="/removeLoginServlet">退出</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a class="user-collect" href="" title="我的收藏" style=" display: none; padding: 0 21px 11px;" >
+                                <i class="icon"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+<div  class="page-outer">
+    <div class="page-container">
+        <div class="pure-g pb40">
+            <div class="avatar"><img src="images/1.png" alt="" class="pic"></div>
+            <div class="pr30">
+                <h1 id="kitchenName">某某用户的厨房</h1>
+                <span>2018-8-27 加入</span>
+            </div>
+            <div class="pos-r">
+                <div class="fllow">
+                    <a href="">设置个人信息</a>
+                </div>
+                <div class="w100">
+                    <div class="flower-num">
+                        <div class="mb10">关注的人</div>
+                        <div class=""><a href="" class="font01" >0</a></div>
+                    </div>
+                    <div class="beiflower-num">
+                        <div class="mb10">被关注</div>
+                        <div class=""><a href="" class="font01">0</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb35">
+            <ul class="m-menu">
+                <li class="active"><a href="#">概况</a></li>
+                <li class="menu-click"><a>菜谱<span class="menu-num">0</span></a></li>
+                <li><a href="#">作品0</a></li>
+                <li><a href="#">菜单</a></li>
+                <li><a href="#">留言板</a></li>
+                <li><a href="#">草稿箱</a></li>
+                <li><a href="#">收藏</a></li>
+            </ul>
+        </div>
+        <!----------------------------------留言板-------------------------------------->
+
+
+        <div class="messageBoard">
+            <div class="Msg">
+                <textarea  id="clearMsg"  rows="8" name="l_content" style="box-shadow:0 0 1px gray;overflow: hidden" placeholder="用':'+拼音，看看你能打出什么"></textarea>
+            </div>
+            <div class="button_Msg">
+                <input type="button"  value="发言" style="background-color: red;color: #effbef;width: 100px;height: 40px;border:none"/>
+            </div>
+            <div class="content_Msg" ></div>
+        </div>
+        <!----------------------------------------------------------------------------->
+
+
+        <div class="people-home-main">
+            <!--没有菜谱-->
+            <div class="no-2" style="display: none" id="no-menu">
+                <div class="float-right"><a href="" class="caipu">+创建菜谱</a></div>
+                <div class="align-center">你还没有创建任何菜谱，快和厨友们分享一下自己的拿手好菜吧</div>
+            </div>
+            <!--有菜谱-->
+            <div class="mb25 mbmmm" style="display: none" id="yes-menu-create">
+                <div class="float-right"><a href="" class="caipu">+创建菜谱</a></div>
+            </div>
+            <div class="block1" style="display:none;" id="yes-menu-list">
+                <h3>已发表菜谱</h3>
+                <div class="recipes">
+                    <ul class="plain-1" id="menu-show-ul">
+
+                    </ul>
+                </div>
+            </div>
+
+
+            <!--没有概况-->
+            <!--<div class="no-1">-->
+                <!--<h3>夜观天象，传说一只未来大厨将从这里启程...</h3>-->
+                <!--<div class="no-15">-->
+                    <!--<div>找到你会做的菜，传上你的作品</div>-->
+                    <!--<div>找不到？你可以创建菜谱，亮出你的独门绝技</div>-->
+                <!--</div>-->
+                 <!--<form class="search" action="/search/" id="search2">-->
+                            <!--<span class="twitter-typeahead" style="position: relative; float: left;">-->
+                                <!--<input class="tt-hint" type="text" autocomplete="off" spellcheck="off" disabled="" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);">-->
+                                <!--<input type="text" name="keyword" class="typeahead float-left tt-query" value=""  autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;">-->
+                                <!--<span style="position: absolute; left: -9999px; visibility: hidden; white-space: nowrap; font-family: sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 1px; text-indent: 0px; text-rendering: auto; text-transform: none;"></span>-->
+                                <!--<span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"></span>-->
+                            <!--</span>-->
+                            <!--<input type="hidden" name="cat" value="1001">-->
+                             <!--<input type="submit" value="搜菜谱" class="button float-left">-->
+                <!--</form>-->
+            <!--</div>-->
+                  <!--有概况-->
+                <!--<div class="block">-->
+                    <!--<h3>手机用户1928_t276的菜谱<span class="font12">（<a href="">查看全部1菜谱</a>）</span></h3>-->
+                    <!--<div class="recipes">-->
+                        <!--<ul class="plain-1">-->
+                            <!--<li>-->
+                                <!--<div    class="recipe-280">-->
+                                    <!--<div class="cover"><a href="" class="image-link"><img src="images/mykitchen/kit.png" alt="" width="280px" height="216px;" class="unveiled"></a></div>-->
+                                    <!--<p class="r-red-font"><a href="">生煎</a></p>-->
+                                    <!--<div class="s-ellipsis">0做过 0收藏 <a href="" class="gray-link">手机用户1928_t276</a></div>-->
+                                <!--</div>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+            <!--没有菜谱-->
+            <!--<div class="no-2">-->
+                <!--<div class="float-right"><a href="" class="caipu">+创建菜谱</a></div>-->
+                <!--<div class="align-center">你还没有创建任何菜谱，快和厨友们分享一下自己的拿手好菜吧</div>-->
+            <!--</div>-->
+                <!--有菜谱-->
+                <div class="mb25">
+                    <!--<div class="float-right"><a href="" class="caipu">+创建菜谱</a></div>-->
+                    <!--<div class="stats">-->
+                        <!--你创建的<strong>1</strong>个菜谱已经被大家浏览了<strong>2</strong>次，做过了<strong>0</strong>次-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="block1">-->
+                <!--<h3>已发表菜谱</h3>-->
+                <!--<div class="recipes">-->
+                    <!--<ul class="plain-1">-->
+                        <!--<li>-->
+                            <!--<div class="recipe-280">-->
+                                <!--<div class="cover"><a href="" class="image-link"><img src="images/mykitchen/kit.png" alt="" width="280px" height="216px;" class="unveiled"></a></div>-->
+                                <!--<p class="r-red-font"><a href="">生煎</a></p>-->
+                                <!--<div class="s-ellipsis">0做过 0收藏 <a href="" class="gray-link">手机用户1928_t276</a></div>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+
+             <!--</div>-->
+            <!--作品-->
+            <!--<div class="no-3">-->
+                <!--<div class="align-center">你还没有上传过作品，去看看大家都在<a href="">做什么</a>吧？</div>-->
+            <!--</div>-->
+            <!--菜单-->
+            <!--<div class="no-4">-->
+                <!--<div id="mb40" class="mb40">-->
+                    <!--<div class="pure-1">-->
+                        <!--<span>手机用户1928_t276创建的菜单</span>-->
+                        <!--&nbsp;|&nbsp;-->
+                        <!--<a href="">手机用户1928_t276收藏的菜单</a>-->
+                    <!--</div>-->
+                    <!--<div class="pure-2">-->
+                        <!--<a href="">+创建一个菜单</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="menu-list">-->
+                    <!--<ul class="plain">-->
+                        <!--<li><a href="">我的收藏</a>(0)</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--留言板-->
+            <!--<div class="no-5">-->
+                <!--<div class="comment-block">-->
+                    <!--<form id="post-reply" method="post">-->
+                        <!--<textarea id="reply" name="reply" placeholder="用&quot;:&quot;+拼音，看看你能打出什么"></textarea>-->
+                        <!--<br>-->
+                        <!--<input type="submit" value="发言" class="mt10">-->
+                    <!--</form>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash;草稿箱&ndash;&gt;-->
+            <!--<div class="no-6"></div>-->
+
+        </div>
+    </div>
+</div>
+<!--======================================================================================================================================================  -->
+
+<div class="footer-outer">
+    <div class="footer-container">
+
+
+        <div class="pure-g buttons">
+            <a href="" class="button">入驻下厨房市集</a>
+            <a href="" class="button">广告合作</a>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-3-4">
+                <a data-ga-event="公共页面/footer/$text" href="" target="_blank" title="美食生活杂志">美食生活杂志</a>
+                &nbsp;
+                <a href="" target="_blank" title="厨房工作" rel="nofollow">厨房工作</a> &nbsp;
+                <a data-ga-event="公共页面/footer/$text" href="" target="_blank" title="社区指导原则" rel="nofollow">社区指导原则</a>
+                &nbsp;
+                <a data-ga-event="公共页面/footer/$text" href="" target="_blank"
+                   title="下厨房出版的书" rel="nofollow">下厨房出版的书</a> &nbsp;
+                <a data-ga-event="公共页面/footer/$text" href="" target="_blank" title="帮助中心" rel="nofollow">帮助中心</a>
+                &nbsp;
+                <a data-ga-event="公共页面/footer/$text" href="" target="_blank" title="联系我们"
+                   rel="nofollow">联系我们</a> &nbsp;
+                <a data-ga-event="公共页面/footer/$text" href="javascript:void(0)" title="意见反馈" rel="nofollow"
+                   id="feedbackButton">意见反馈</a> &nbsp;
+                <a data-ga-event="公共页面/footer/$text" href="" target="_blank" title="隐私声明"
+                   rel="nofollow">隐私声明</a>
+            </div>
+            <div class="pure-u-1-4 align-right">
+                <div class="social-likes">
+                    <a href="" target="_blank" rel="nofollow">
+                        <!--<img src="https://s.chuimg.com/simpleicons/sinaweibo.svg" alt="微博" title="微博">-->
+                    </a>
+                    &nbsp;
+                    <a href="" target="_blank" rel="nofollow">
+                        <!--<img src="https://s.chuimg.com/simpleicons/twitter.svg" alt="Twitter" title="Twitter">-->
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-3-4">
+                Copyright © xiachufang.com &nbsp;
+                京B2-20180499 &nbsp;
+                <a href="" class="gray-link" target="_blank"
+                   rel="nofollow">京ICP备13009078号-1</a> &nbsp;
+                京公网安备11010802022310号
+                <br>
+                违法和不良信息举报电话：010-52800126 &nbsp;
+                举报邮箱：talk@xiachufang.com
+            </div>
+            <div class="pure-u-1-4 align-right">
+                唯有美食与爱不可辜负
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+</div>
+</body>
+</html>

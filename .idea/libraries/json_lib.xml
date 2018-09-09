@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="json-lib">
+    <CLASSES>
+      <root url="file://D:/maven/.m2/repository/net/sf/json-lib" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://D:/maven/.m2/repository/net/sf/json-lib" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://D:/maven/.m2/repository/net/sf/json-lib" />
+    </SOURCES>
+    <jarDirectory url="file://D:/maven/.m2/repository/net/sf/json-lib" recursive="false" />
+  </library>
+</component>

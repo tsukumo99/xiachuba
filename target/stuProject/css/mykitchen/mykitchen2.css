@@ -1,0 +1,159 @@
+.pic{
+    width:160px;
+    height: 160px;
+}
+.avatar{
+    width: 20.8333%;
+    /*height: 160px;*/
+}
+.pr30{
+    width: 62.5%;
+    margin-left: -180px;
+}
+.pr30 span{
+    font-size: 12px;
+    color: #909090;
+}
+.pos-r{
+    height: 160px;
+    text-align: center;
+    position: relative;
+    width: 16.6667%;
+}
+.people-home-main{
+    padding-top: 15px;
+    width: 1000px;
+    height: auto;
+}
+.fllow a{
+    color: #909090;
+    font-size: 12px;
+    background-color: transparent;
+}
+.flower-num{
+    padding-top: 15px;
+    border-right: 1px solid #ccc;
+    width: 50%;
+    float: left;
+    display: block;
+}
+.beiflower-num{
+    padding-top: 15px;
+    float: left;
+    width: 50%;
+}
+.mb10{
+    font-size: 12px;color: #333;
+    margin-bottom: 10px!important;
+}
+.font01{
+    font-size: 16px;
+    font-weight: 700;
+    overflow: hidden;
+    color: #dd3915;
+    text-decoration: none;
+    background-color: transparent;
+}
+.mb35{
+    width: 1000px;
+    height: 48.8px;
+}
+.m-menu{
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    display: block;
+}
+.m-menu>li{
+    line-height: 45px;
+    height: 48px;
+    display: block;
+    float: left;
+    background-color: #f5f6f5;
+    min-width: 142px;
+    text-align: center;
+    border-right: 2px solid #fff;
+}
+.m-menu li a{
+    display: block;
+    color: black;
+}
+.m-menu li a:hover{
+    color: #fff;
+    background-color: #dd3915;
+}
+.active{
+    background-color: #dd3915;
+    color: #fff;
+
+}
+
+.caipu{
+    color: #fff;
+    background-color: #dd3915;
+    border-radius: 0;
+    border: none;
+    line-height: normal;
+    vertical-align: baseline;
+    text-align: center;
+    font-size: 15px;
+    padding: 15px!important;
+    padding-top: 10px!important;
+    padding-bottom: 10px!important;
+}
+#search2{
+    margin-left: 344px;
+    margin-top: 10px;
+}
+.align-center{
+    padding: 40px!important;
+    text-align: center;
+}
+.comment-block{
+    width: 920px;
+    height: 344px;
+}
+
+.mt10{
+    border: 1px solid transparent;
+    margin-top: 10px!important;
+    color: #fff;
+    background-color: #dd3915;
+}
+.pure-1{
+    width: 86.5%;
+    float: left;
+    display: block;
+}
+.pure-2 {
+    float: right;
+    width: 12.5%;
+}
+
+.menu-list{
+    height: 50px;
+
+}
+#mb40{
+    width: 1000px;
+    height: 30px;
+}
+
+.recipes{
+    width: 1080px;
+
+}
+.recipe-280{
+    border: 1px solid #f3f3f3;
+    width: 280px;
+}
+.s-ellipsis{
+    font-size: 12px;
+    color: #909090;
+
+}
+.stats{
+    line-height: 36px;
+}

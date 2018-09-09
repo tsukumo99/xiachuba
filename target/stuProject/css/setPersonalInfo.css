@@ -1,0 +1,179 @@
+.content-container{
+    width: 1000px;
+    margin: 0 auto;
+}
+.basic h1{
+    font-size: 34px;
+    font-weight: 700;
+    word-break: break-all;
+}
+.peronal-bar{
+    box-sizing: border-box;
+    width: 1000px;
+    height: 53px;
+}
+.peronal-bar ul li{
+    list-style: none;
+    width: 96px;
+    height: 38px;
+    float: left;
+    cursor: pointer;
+}
+.peronal-bar a{
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+    padding-top: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+/*基本信息设置*/
+#like{
+    width: 75px;
+    height: 50px;
+}
+.basic-info{
+    box-sizing: border-box;
+    padding-left: 58px;
+}
+#basic-show{
+    box-sizing: border-box;
+    padding-left: 58px;
+}
+.basic-info div{
+    margin: 20px 0;
+}
+#basic-show div{
+    margin: 20px 0;
+}
+.basic-info div>span{
+    display: inline-block;
+    margin-right: 10px;
+}
+#basic-show div>span{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.basic-info textarea{
+    width: 455px;
+    height: 122px;
+    margin-left: -33px;
+}
+#basic-show textarea{
+    width: 455px;
+    height: 122px;
+    margin-left: -33px;
+}
+.basic-info .selfIntroduce{
+    position: relative;
+}
+#basic-show .selfIntroduce{
+    position: relative;
+}
+.basic-info .selfIntroduce span{
+    position: relative;
+    top: -100px;
+    left: -33px;
+}
+#basic-show .selfIntroduce span{
+    position: relative;
+    top: -100px;
+    left: -33px;
+}
+.email input{
+    width: 193px;
+    height: 39px;
+    border: 1px gainsboro solid;
+    padding-left: 10px;
+}
+.basic-info button {
+    color: white;
+    background-color: #dd3915;
+    width: 92px;
+    height: 37px;
+    border: none;
+    margin-left: 48px;
+    margin-bottom: 80px;
+}
+#basic-show button {
+    color: white;
+    background-color: #dd3915;
+    width: 92px;
+    height: 37px;
+    border: none;
+    margin-left: 48px;
+    margin-bottom: 80px;
+}
+.set-vatar button{
+    color: white;
+    background-color: #dd3915;
+    width: 92px;
+    height: 37px;
+    border: none;
+    margin-left: 48px;
+    margin-bottom: 80px;
+}
+
+
+#basic-info:hover{
+    color: white;
+}
+.basic li a:hover{
+    background-color: #dd3915;
+    color: white;
+}
+/*设置头像*/
+.set-vatar{
+    display: none;
+    box-sizing: border-box;
+    padding: 30px 0 0 58px;
+}
+.set-vatar .tips{
+    color: #222;
+    font-size: 22px;
+}
+.upFile{
+    margin: 20px 0;
+}
+.btn-submit input{
+    color: white;
+    width: 92px;
+    height: 37px;
+    background-color: #dd3915;
+}
+.btn-submit span{
+    color: #dd3915;
+}
+.btn-submit{
+    margin: 40px 0 80px 0;
+}
+/*修改密码*/
+.change-pwd{
+    display: none;
+    position: relative;
+}
+
+.newPwd,.repeatPwd,.currPwd{
+    margin-left: 55px;
+}
+.newPwd{
+    margin-top: 20px;
+}
+.change-pwd input{
+    width: 227px;
+    height: 39px;
+    margin-left: 12px;
+}
+.repeatPwd{
+    margin-top: 20px;
+}
+.change-pwd button{
+    color: #fff;
+    background-color: #dd3915;
+    width: 122px;
+    height: 37px;
+    border: none;
+    margin: 50px 0 200px 150px;
+}
